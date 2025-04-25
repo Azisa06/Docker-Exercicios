@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+
+RUN apt update && apt install -y systemd procps
+
+COPY script.sh /script.sh
+
+RUN chmod +x /script.sh
+
+CMD [ "bash" ]
