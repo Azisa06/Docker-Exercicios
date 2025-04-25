@@ -47,7 +47,7 @@ CMD [ "bash" ]
 
 ```
 
-> [!NOTE]>
+> [!NOTE]\ 
 >- `RUN apt update && apt install -y systemd procps`: Atualiza o repositório e instala utilitários essenciais
 >- `COPY script.sh /script.sh`: Copia o script para o container
 >- `RUN chmod +x /script.sh`: Concede permissão de execução
@@ -66,7 +66,7 @@ docker build -t 02-meu-container-ubuntu .
 > #### Saída esparada pelo WSL:
 >![alt text](prints/image-1.png)
 
-> [!NOTE]> Se estiver usando Rancher Desktop com WSL (Ubuntu), certifique-se de estar no seu diretório correto usando:
+> [!NOTE]\ Se estiver usando Rancher Desktop com WSL (Ubuntu), certifique-se de estar no seu diretório correto usando:
 > ```bash
 > cd /mnt/c/Users/seuUsuario/seuProjeto
 > ```
@@ -79,7 +79,7 @@ docker build -t 02-meu-container-ubuntu .
 docker run --name container-ubuntu -it meu-container-ubuntu
 ```
 
-> [!NOTE]>
+> [!NOTE]\ 
 >- `-it`: Permite interação no terminal.
 >- `--name`: Dá um nome amigável de sua escolha ao container.
 
@@ -120,7 +120,7 @@ docker run --name container-ubuntu -it --privileged 02-meu-container-ubuntu
 > #### Saída esperada pelo WSL:
 > ![alt text](prints/image-3.png)
 
-> [!WARNING]> Utilizar `--privileged` **não é recomendado em produção** pois remove parte do isolamento de segurança do container.
+> [!WARNING]\ Utilizar `--privileged` **não é recomendado em produção** pois remove parte do isolamento de segurança do container.
 
 ---
 
