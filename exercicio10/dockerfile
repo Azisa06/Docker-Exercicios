@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+RUN useradd -m appuser
+
+#pasta para o app
+WORKDIR /home/appuser/app
+COPY app.py .
+
+#permissoes para o novo usuario
+RUN chown -R appuser:appuser /home/appuser
+
+#troca de usuário
+USER appuser
+
+CMD ["python", "app.py"] 

@@ -1,0 +1,1 @@
+print("Olá! Estou rodando como um usuário não-root!")
